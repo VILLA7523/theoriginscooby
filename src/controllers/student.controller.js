@@ -125,8 +125,8 @@ class StudentController {
     return data;
   }
 
-  async deleteById(id,id_profito){
-    const result = inscriptionDb.deleteinscription(id,id_profito);
+  async deleteById(id,id_course){
+    const result = inscriptionDb.deleteinscription(id,id_course);
     const data = await result.catch((err)=> {
       console.log("controller error find by course" ,err);
       return null;

@@ -115,8 +115,8 @@ router.get("/deletecourse/:id", async (req, res) => {
   res.redirect("/vercursos");
 });
 
-router.get("/deletealumnos/:id/:id_profito" , async (req,res) => {
-  const data = await studentDb.deleteById(req.params.id,req.params.id_profito);
+router.get("/deletealumnos/:id/:id_course" , async (req,res) => {
+  const data = await studentDb.deleteById(req.params.id,req.params.id_course);
   res.redirect("/tabla/"+req.params.id);
 })
 

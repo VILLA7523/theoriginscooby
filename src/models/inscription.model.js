@@ -36,11 +36,11 @@ class InscriptionModel {
     return data[0];
   }
 
-  async deleteinscription(id,id_profito){
+  async deleteinscription(id,id_course){
     const con = connectionDb.promise();
     const data = await con.query(
-      "DELETE FROM inscription WHERE student.StudentID = ? AND professor.ProfessorID = ? ",
-      [id,id_profito]
+      "DELETE FROM inscription WHERE inscription.StudentID = ? AND inscription.CourseID = ? ",
+      [id,id_course]
     );
     console.log(data[0]);
     return data[0];
