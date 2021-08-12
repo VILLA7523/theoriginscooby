@@ -2,7 +2,7 @@
 Bienvenido al centro de desarrolladores de Scooby Attendance. Encontrará guías y documentación completas que lo ayudarán a comenzar a trabajar con Scooby Attendances lo más rápido posible, así como asistencia en caso de que se atasque. ¡Saltemos de inmediato!
 
 <p align="center">
-  <img src="https://github.com/VILLA7523/theoriginscooby/blob/main/src/public/images/logodog.png?raw=true" alt="Sublime's custom image"/>
+  <img src="https://github.com/VILLA7523/theoriginscooby/blob/main/WEB/src/public/images/logodog.png?raw=true" alt="Sublime's custom image"/>
 </p>
 
 ## Contexto
@@ -64,10 +64,10 @@ Todas las vistas están realizadas en JADE siendo un lenguaje que tiene de base 
 
 # Diagrama MVC
 
-![alt text](https://github.com/VILLA7523/theoriginscooby/blob/main/src/public/images/digrama.svg)
+![alt text](https://github.com/VILLA7523/theoriginscooby/blob/main/WEB/src/public/images/digrama.svg)
 
 # Base de Datos 
-![alt text](https://github.com/VILLA7523/theoriginscooby/blob/main/src/public/images/imagen.png)
+![alt text](https://github.com/VILLA7523/theoriginscooby/blob/main/WEB/src/public/images/imagen.png)
 
 ## 🔧 Herramientas usadas
 ### Wireframes
