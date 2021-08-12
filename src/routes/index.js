@@ -16,7 +16,7 @@ router.get("/register", async function (req, res, next) {
 router.post("/checkcrearcurso",async function (req, res, next) {
   const token = req.cookies.tokenUser;
   console.log("token",token)
-  const course = await professorDb.NuevoCourse(req.body.nombre,req.body.seccion,req.body.tipo,token,23,'I');
+  const course = await professorDb.NuevoCourse(req.body.nombre,req.body.seccion,req.body.tipo,token,23,req.body.semestre);
   console.log(course);
   res.redirect('/vercursos?msg=ok');
 }
@@ -115,8 +115,8 @@ router.get("/deletecourse/:id", async (req, res) => {
   res.redirect("/vercursos");
 });
 
-router.get("/deletealumnos/:id/:id_course" , async (req,res) => {
-  const data = await studentDb.deleteById(req.params.id,req.params.id_course);
+router.get("/deletealumnos/:id/:id_alumno" , async (req,res) => {
+  const data = await studentDb.deleteById(req.params.id,req.params.id_alumno);
   res.redirect("/tabla/"+req.params.id);
 })
 

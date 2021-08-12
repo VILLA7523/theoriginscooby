@@ -13,8 +13,8 @@ class CourseModel {
     Semestre,
   ) {
       const con = connectionDb.promise();
-      const data = await con.query("INSERT INTO course (CourseID,Course_Name,SectionID,TypeID,ProfessorID,NumEst,Semestre) VALUES (?,?,?,?,?,?,?)",
-      [27,Course_Name,SectionID,TypeID,ProfessorID,NumEst,Semestre]
+      const data = await con.query("INSERT INTO course (Course_Name,SectionID,TypeID,ProfessorID,NumEst,Semestre) VALUES (?,?,?,?,?,?)",
+      [Course_Name,SectionID,TypeID,ProfessorID,NumEst,Semestre]
     );
 
     console.log("error",data);
