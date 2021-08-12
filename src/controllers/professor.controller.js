@@ -178,6 +178,15 @@ class ProfessorController {
     return data;
   }
 
+
+  async getasisbycuiestudent(id) {
+    const result = sttendance.getasisbycuiestudent(id)
+    const data = await result.catch((err)=>{
+      console.log("Controller error",err);
+      return null;
+    })
+    return data;
+  }
 }
 
 module.exports = ProfessorController;

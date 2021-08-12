@@ -15,6 +15,15 @@ router.get("/alumnos", async (req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(info));
 });
+
+router.get("/horarios/:cui", async (req, res) => {
+  const info = await studentDb.courseforstudents(req.params.cui);
+  res.setHeader("Content-Type", "application/json");
+  console.log("info",info);
+  res.end(JSON.stringify(info));
+});
+
+
 router.get("/alumnos/:cui", async (req, res) => {
   const info = await studentDb.findBydCui(req.params.cui);
   res.setHeader("Content-Type", "application/json");
@@ -112,4 +121,17 @@ router.get("/cursos/nombre/:name", async (req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(info));
 });
+
+router.get("/verhorario/:id/:name", async function (req, res, next) {
+  const info = await professorDb.GetHorario(req.params.id);
+  res.setHeader("Content-Type", "application/json");
+  res.end(JSON.stringify(info));
+});
+
+router.get("/verasistencia/:id", async function (req, res) {
+  const info = await professorDb.getasisbycuiestudent(req.params.id);
+  res.setHeader("Content-Type", "application/json");
+  res.end(JSON.stringify(info));
+});
+
 module.exports = router;
