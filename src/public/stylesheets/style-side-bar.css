@@ -31,9 +31,9 @@ nav h2{
 }
 
 nav img{
-    width: 80% !important;
-    height: auto !important;
-    /*margin-left: 20px !important;*/
+    width: 80%;
+    height: auto;
+    margin-left: 20px;
 }
 
 nav #options{

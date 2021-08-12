@@ -9,7 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 #bar h4, #bar h5{
@@ -18,11 +18,6 @@
     font-style: normal;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 0;
-}
-
-#bar h4{
-    font-size: large !important;
 }
 
 #bar i{
