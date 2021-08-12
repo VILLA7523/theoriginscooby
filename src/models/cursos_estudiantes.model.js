@@ -11,6 +11,5 @@ class CourseStudentsModel {
     );
     return data[0];
   }
-
 }
 module.exports = CourseStudentsModel;

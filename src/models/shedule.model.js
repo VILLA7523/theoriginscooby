@@ -29,16 +29,6 @@ class SheduleModel{
         console.log("model",data);
         return data[0];
     }
-
-    
-    async CourseForstudents(id) {
-        const conextion = connectionDb.promise();
-        const data = await conextion.query(
-        "SELECT * FROM schedule INNER JOIN inscription ON schedule.CourseID = inscription.CourseID INNER JOIN course ON Inscription.CourseID = course.CourseID WHERE inscription.Studentid = ?",
-        [id]
-        );
-        return data[0];
-    }
 }
 
 module.exports = SheduleModel;

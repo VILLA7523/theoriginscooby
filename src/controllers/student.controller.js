@@ -14,8 +14,6 @@ const AttendanceModel = require("../models/attendance.model");
 const attendaceDb = new AttendanceModel();
 const CurseAttendanceModel = require("../models/course_attendance.model");
 const curse_attendanceDb = new CurseAttendanceModel();
-const SheduleModel = require("../models/shedule.model");
-const sheduleDb = new SheduleModel();
 
 class StudentController {
   constructor() {}
@@ -120,15 +118,6 @@ class StudentController {
   }
   async findByIdCourse(id){
     const result = inscriptionDb.findByCourse(id);
-    const data = await result.catch((err) => {
-      console.log("controller Error find by Course", err);
-      return null;
-    });
-    return data;
-  }
-
-  async courseforstudents(id){
-    const result = sheduleDb.CourseForstudents(id);
     const data = await result.catch((err) => {
       console.log("controller Error find by Course", err);
       return null;

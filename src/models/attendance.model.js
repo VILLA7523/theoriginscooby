@@ -13,15 +13,5 @@ class AttendanceModel {
     );
     return data[0];
   }
-  
-  async getasisbycuiestudent(id) {
-    const conextion = connectionDb.promise();
-    const data = await conextion.query(
-    "SELECT * FROM attendances INNER JOIN curse_attendances ON attendances.AttendanceID = curse_attendances.AttendanceId WHERE curse_attendance.StudentID = ?",
-    [id]
-    );
-    return data[0];
-  }
 }
-
 module.exports = AttendanceModel;
